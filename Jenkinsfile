@@ -18,7 +18,7 @@ pipeline {
                       ansible_become_pass: [
                           value: """${sh(
                             returnStdout: true,
-                            script: 'cat /tmp/.ssh/become_pass'
+                            script: 'cat /tmp/become_pass'
                           )}""",
                           hidden: true
                       ]
