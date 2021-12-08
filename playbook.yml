@@ -1,0 +1,12 @@
+- name: Test playbook for test vm
+  hosts: testvm
+  become: yes
+
+  tasks:
+
+  - name: Debug
+    debug:
+      msg: "Running playbook..."
+
+  - name: Run python script
+    shell: python /home/ld-admin/test.py
