@@ -9,4 +9,4 @@
       msg: "Running playbook..."
 
   - name: Run python script
-    shell: python /home/ld-admin/test.py
+    shell: python /home/ld-admin/testing/test.py
