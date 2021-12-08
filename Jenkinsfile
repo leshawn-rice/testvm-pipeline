@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sudo ansiblePlaybook(
+                ansiblePlaybook(
                   playbook: 'playbook.yml',
                   inventory: 'inventory.ini',
                   extraVars: [
