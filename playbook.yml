@@ -1,6 +1,5 @@
 - name: Test playbook for test vm
-  hosts: testvm
-  become: yes
+  hosts: localhost
 
   tasks:
 
