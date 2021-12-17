@@ -11,20 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                ansiblePlaybook(
-                  playbook: 'playbook.yml',
-                  inventory: 'inventory.ini',
-                  extraVars: [
-                      ansible_become_pass: [
-                          value: """${sh(
-                            returnStdout: true,
-                            script: 'cat /tmp/become_pass'
-                          )}""",
-                          hidden: true
-                      ]
-                  ]
-              )
-
+                echo 'Testing....'
             }
         }
         stage('Deploy') {
